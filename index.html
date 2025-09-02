@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Forja Fitness</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="p-5">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <img src="img/logo.png" class="nav-img" alt="Logo Forja Fitness" loading="lazy">
+      <ul class="nav mt-5">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="my-5">
+      <div class="inicio-fundo d-flex justify-content-between align-items-center">
+        <div class="esquerda-conteudo">
+          <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas à</h1>
+          <img src="img/logo-2.png" class="mb-3 img-fluid" width="563" height="278" alt="Forja Fitness" loading="lazy">
+          <a href="#planos" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero começar!</a>
+        </div>
+        <img src="img/hero-fitness.png" alt="Atleta treinando na academia"
+             title="Forja Fitness" class="img-fluid img-inicio">
+      </div>
+    </section>
+
+    <!-- SOBRE (mantendo a seção equivalente ao 'tropicalia' original) -->
+    <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
+      <div class="container d-flex align-items-center">
+        <div class="col-4 d-flex justify-content-center">
+          <img src="img/sobre-forja.png" class="rounded-pill" alt="Equipe Forja" width="273" height="331" loading="lazy">
+        </div>
+        <div class="col-5">
+          <h2>Sobre a Forja Fitness</h2>
+          <p class="p-2">
+            Disciplina e evolução contínua. Na Forja, combinamos treino inteligente, acompanhamento profissional e
+            uma estrutura premium para você atingir seus objetivos com qualidade e sofisticação.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS (novo, seguindo seu pedido) -->
+    <section id="planos" class="my-5">
+      <div class="text-center mb-4">
+        <h2>Nossos Planos</h2>
+        <p class="lead text-muted-contrast">Escolha o plano que melhor combina com seus objetivos.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Básico -->
+        <div class="col-12 col-md-4">
+          <div class="card plano-card plano-basico shadow-lg border-0 rounded-4 h-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="fw-bold mb-2">Básico</h3>
+              <p class="descricao mt-2">
+                Para começar com o pé direito: acesso à musculação, treinos livres e infraestrutura completa.
+                Ideal para iniciantes que querem consistência.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>✔️ Acesso em horário comercial</li>
+                <li>✔️ Treinos livres</li>
+                <li>✔️ Vestiários completos</li>
+              </ul>
+
+              <div class="mt-auto">
+                <p class="preco badge-preco mb-3">R$ 79/mês</p>
+                <a href="#" class="btn btn-primary btn-lg w-100 rounded-pill">Assinar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forja Pro (destaque com contraste melhor) -->
+        <div class="col-12 col-md-4">
+          <div class="card plano-card plano-pro shadow-xl border-0 rounded-4 h-100 destaque">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge badge-destaque">Mais popular</span>
+              </div>
+              <h3 class="fw-bold mb-2">Forja Pro</h3>
+              <p class="descricao mt-2">
+                Evolução acelerada: inclui aulas coletivas (funcional, HIIT e spinning), avaliação física bimestral
+                e acompanhamento com instrutor para manter o progresso.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>✔️ Tudo do Básico</li>
+                <li>✔️ Aulas coletivas inclusas</li>
+                <li>✔️ Avaliação física a cada 2 meses</li>
+                <li>✔️ Acompanhamento com instrutor</li>
+              </ul>
+
+              <div class="mt-auto">
+                <p class="preco preco-destaque badge-preco mb-3">R$ 129/mês</p>
+                <a href="#" class="btn btn-primary btn-lg w-100 rounded-pill">Assinar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elite -->
+        <div class="col-12 col-md-4">
+          <div class="card plano-card plano-elite shadow-lg border-0 rounded-4 h-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="fw-bold mb-2">Elite</h3>
+              <p class="descricao mt-2">
+                Máximo desempenho: personal trainer dedicado, consultoria nutricional individual, treinos
+                personalizados semanais e acesso 24h para treinar quando quiser.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>✔️ Tudo do Forja Pro</li>
+                <li>✔️ Personal trainer dedicado</li>
+                <li>✔️ Consultoria nutricional</li>
+                <li>✔️ Treinos personalizados semanais</li>
+                <li>✔️ Acesso 24h</li>
+              </ul>
+
+              <div class="mt-auto">
+                <p class="preco badge-preco mb-3">R$ 199/mês</p>
+                <a href="#" class="btn btn-primary btn-lg w-100 rounded-pill">Assinar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA (mantida) -->
+    <section id="galeria">
+      <h2 class="text-center pt-5">Galeria</h2>
+      <div class="container p-3 mt-3 fundo-galeria">
+        <div class="row justify-content-md-center">
+          <div class="col-md-4">
+            <img src="img/treino1.jpg" class="img-fluid rounded-5" alt="Treino 1" loading="lazy">
+          </div>
+          <div class="col-md-4">
+            <img src="img/treino2.jpg" class="img-fluid rounded-5" alt="Treino 2" loading="lazy">
+          </div>
+        </div>
+        <div class="row mt-4 justify-content-md-center">
+          <div class="col-md-4">
+            <img src="img/treino3.jpg" class="img-fluid rounded-5" alt="Treino 3" loading="lazy">
+          </div>
+          <div class="col-md-4">
+            <img src="img/treino4.jpg" class="img-fluid rounded-5" alt="Treino 4" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO (mantido) -->
+    <section id="contato">
+      <div class="container p-5 d-flex justify-content-center">
+        <div class="col-md-8 col-lg-10 rounded-5 formulario">
+          <h2 class="mb-3">Entre em contato</h2>
+          <form>
+            <div class="form-group mb-3">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
+            </div>
+            <div class="form-group mb-3">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center p-3 fst-italic">
+    <p>Acesse nossas redes:</p>
+    <a href="#"><i class="bi bi-whatsapp"></i></a>
+    <a href="#"><i class="bi bi-instagram"></i></a>
+    <a href="#"><i class="bi bi-tiktok"></i></a>
+    <p class="mt-3">© 2025 Forja Fitness — Projeto fictício sem fins comerciais.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

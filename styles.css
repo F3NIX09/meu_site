@@ -1,0 +1,251 @@
+/* Tipos */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+:root{
+  /* Azul padrão (btn-primary, links de destaque) */
+  --bs-primary: #3a8bff;
+
+  /* Paleta escura sofisticada */
+  --fundo-1: #0f0f0f;   /* fundo base */
+  --fundo-2: #171717;   /* cartões/containers */
+  --grafite: #222;      /* variação para cartões */
+  --texto: #f2f2f2;
+  --texto-muted: #cfcfcf;
+
+  --shadow-strong: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  font-size: 1.0625rem; /* +legível */
+  font-family: 'Montserrat', sans-serif;
+  color: var(--texto);
+  background:
+    radial-gradient(1200px 800px at 10% 0%, #151515 0%, transparent 60%),
+    radial-gradient(1200px 800px at 90% 10%, #1a1a1a 0%, transparent 60%),
+    var(--fundo-1);
+}
+
+/* Header */
+header{
+  background-color: var(--fundo-1);
+  border-bottom: 1px solid #1d1d1d;
+}
+
+/* Nav */
+.nav-link{
+  color: var(--texto);
+  font-weight: 600;
+  transition: color .2s ease;
+}
+.nav-link:hover{ color: var(--bs-primary); }
+
+/* Seções base */
+section{ padding-bottom: 5rem; }
+
+/* --- Hero / Início --- */
+.inicio-fundo{
+  /* Mantendo sua estrutura, mas com mais respiro */
+  background-image: url('img/4965007.jpg'); /* use sua imagem; pode trocar por uma de academia */
+  background-size: cover;
+  background-position: right center;
+  border-radius: 40px;
+  width: 100%;
+  min-height: 640px;
+  padding: 72px 56px; /* + espaçamento como você pediu */
+  margin: 0 auto;
+  position: relative;
+  box-shadow: var(--shadow-strong);
+  overflow: hidden;
+}
+.esquerda-conteudo{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem; /* + espaço entre título, logo e botão */
+}
+.botao-inicio{
+  border-radius: 999px;
+  padding: 0.9rem 1.6rem;
+}
+
+/* imagem à direita (mantida), mas mais responsiva */
+.img-inicio{
+  position: absolute;
+  right: 12px;
+  top: 14rem;     /* um pouco mais alto pra não “colar” */
+  width: 42rem;   /* levemente menor pra respirar */
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,.5));
+}
+
+/* Responsivo: no mobile, não usar absolute pra não quebrar */
+@media (max-width: 991.98px){
+  .img-inicio{
+    position: static;
+    width: 100%;
+    margin-top: 24px;
+  }
+  .inicio-fundo{
+    padding: 48px 24px;
+    min-height: unset;
+  }
+}
+
+/* Título com leve sombra (mantendo sua ideia de destaque) */
+.display-4{
+  text-shadow: -4px 4px rgba(58,139,255,0.25); /* sombra azul suave */
+}
+
+/* --- Seção "Sobre" (era #tropicalia) --- */
+#tropicalia{
+  position: relative;
+  padding-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.02) 40%, transparent);
+}
+#tropicalia .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+h2{
+  font-size: 2.2rem;
+  color: var(--texto);
+  letter-spacing: 0.3px;
+}
+.p-2{ color: var(--texto-muted); }
+
+/* --- Planos --- */
+#planos{
+  scroll-margin-top: 80px;
+}
+.text-muted-contrast{ color: var(--texto-muted); }
+
+.plano-card{
+  background: var(--fundo-2);
+  color: var(--texto);
+  border-radius: 20px;
+  box-shadow: var(--shadow-strong);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  min-height: 540px; /* maior, como pediu */
+  border: 1px solid #2a2a2a;
+}
+.plano-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,.55);
+}
+
+/* variações de tom (sem perder contraste) */
+.plano-basico{ background: #1c1c1c; }
+.plano-elite{ background: #202020; }
+
+/* Pro com contraste melhor do que o fundo */
+.plano-pro{
+  background: #151b22; /* azul-acinzentado escuro */
+  border: 1px solid rgba(58,139,255,0.45);
+  outline: 1px solid rgba(58,139,255,0.12);
+}
+
+/* Badge e preço destacados */
+.badge-destaque{
+  background: rgba(58,139,255,0.15);
+  color: #a9cdff;
+  border: 1px solid rgba(58,139,255,0.35);
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .85rem;
+}
+
+.descricao{
+  font-size: 1.025rem; /* letras maiores */
+  color: var(--texto-muted);
+  line-height: 1.65;
+}
+
+/* Espaçamento entre descrição -> preço -> botão */
+.card-body .preco{
+  margin-top: 1.25rem;  /* distanciamento do conteúdo */
+  margin-bottom: 1rem;  /* distanciamento pro botão */
+}
+
+.badge-preco{
+  display: inline-block;
+  font-size: 1.8rem;     /* preço maior */
+  font-weight: 800;
+  color: #dce9ff;
+  background: linear-gradient(180deg, rgba(58,139,255,0.18), rgba(58,139,255,0.08));
+  border: 1px solid rgba(58,139,255,0.35);
+  padding: .6rem 1rem;
+  border-radius: 14px;
+  letter-spacing: 0.3px;
+}
+.preco-destaque{
+  font-size: 2rem;
+}
+
+/* Botão Assinar: azul */
+.plano-card .btn{
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.plano-card .btn:hover{
+  filter: brightness(0.92);
+}
+
+/* --- Galeria --- */
+#galeria{
+  background-color: #141414;
+  border-radius: 24px;
+  padding-bottom: 3rem;
+}
+.fundo-galeria{
+  background: radial-gradient(700px 500px at 95% 100%, rgba(58,139,255,0.08), transparent 60%);
+}
+
+/* --- Contato --- */
+#contato{
+  background-image: url('img/4965007.jpg'); /* você já tinha; mantém */
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+.formulario{
+  background-color: rgba(20,20,20,0.92);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-strong);
+  font-weight: 600;
+  color: var(--texto);
+}
+.formulario button{
+  font-weight: 700;
+}
+.form-control{
+  background-color: #1e1e1e;
+  color: var(--texto);
+  border: 1px solid #2b2b2b;
+}
+.form-control::placeholder{ color: #9a9a9a; }
+
+/* --- Footer --- */
+footer{
+  background-color: var(--fundo-1);
+  color: var(--texto);
+  border-top: 1px solid #1d1d1d;
+}
+footer i{
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: var(--bs-primary);
+  transition: transform .2s ease, color .2s ease;
+}
+footer i:hover{
+  transform: translateY(-2px);
+  color: #ffffff;
+}
